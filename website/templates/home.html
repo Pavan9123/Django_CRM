@@ -6,13 +6,6 @@
     <h1>
         Logged in...
     </h1>
-    <br>
-    <form method = "GET" action = "{% url 'logout' %}">
-      {% csrf_token %}
-      <form>
-          <button type="submit" name = "logout" class="btn btn-secondary">Logout</button>
-      </form>
-    </form>
 
     {%else%}
 
