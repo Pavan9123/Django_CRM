@@ -1,7 +1,7 @@
-from typing import Any
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
+from .models import Records
 
 class SignUpForms(UserCreationForm):
     
@@ -11,7 +11,7 @@ class SignUpForms(UserCreationForm):
 
     class meta:
         model = User
-        fields = ('username','first_name','last_name','email','password1','password2')
+        fields = ('first_name','last_name','username','password1','password2')
 
     def __init__(self, *args, **kwargs):
         super(SignUpForms,self).__init__(*args, **kwargs)
@@ -30,4 +30,10 @@ class SignUpForms(UserCreationForm):
         self.fields['password2'].widget.attrs['placeholder'] = 'Confirm Password'
         self.fields['password2'].label = ''
         self.fields['password2'].help_text = '<span class="form-text text-muted"><small>Enter the same password as before, for verification.</small></span>'
+
+
+class Record(Records):
+    pass
+
+
 
