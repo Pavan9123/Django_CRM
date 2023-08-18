@@ -11,10 +11,10 @@
 
 	{{ form.as_p }}
 
-<br/>
+<div class = position-relative>
   <button type="submit" class="btn btn-outline-danger">Save</button>
-   <a href="{% url 'home' %}" class="btn btn-outline-dark">Back</a>
-
+   <a href="{% url 'home' %}" class="btn btn-outline-dark position-absolute bottom-0 end-0" >Back</a>
+</div>
 </form>
 </div>
 </div>

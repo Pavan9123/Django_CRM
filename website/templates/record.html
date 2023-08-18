@@ -16,8 +16,10 @@
                     <li><strong>Email</strong>: {{record.email}}</li>
                 </ul>
             </p>
+            <div class = "position-relative">
             <a href="{% url 'home' %}" class="btn btn-outline-dark">Back</a>
-            <a href="{% url 'delete_record' record.id %}" class="btn btn-outline-danger">Delete</a>
+            <a href="{% url 'delete_record' record.id %}" class="btn btn-outline-danger position-absolute bottom-0 end-0">Delete</a>
+            </div>
         </div>
   </div>
 
