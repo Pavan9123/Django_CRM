@@ -18,6 +18,7 @@
             </p>
             <div class = "position-relative">
             <a href="{% url 'home' %}" class="btn btn-outline-dark">Back</a>
+            <a href="{% url 'update_record' record.id %}" class="btn btn-outline-primary">Update Record</a>
             <a href="{% url 'delete_record' record.id %}" class="btn btn-outline-danger position-absolute bottom-0 end-0">Delete</a>
             </div>
         </div>
