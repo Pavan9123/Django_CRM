@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{%block content%}
+
+<div class = "col-md-6 offset-md-3">
+
+	<div class = "card shadow-lg mb-5 bg-body rounded">
+		<div class = "card-header text-bg-dark"><h3>Add Details</h3></div>
+		<div class = "card-body">
+			
+    		<form method = "POST" action = "{% url 'add_record '%}">
+        		{% csrf_token %}
+				<div class = "form-floating mb-3">
+        			{{ form.as_p }}
+				</div>
+    		</form>
+            <br>
+            </div>
+                <a href="{% url 'add_record' %}" class="btn btn-outline-dark">Save</a>
+                <a href="{% url 'home' %}" class="btn btn-outline-secondary">Cancel</a>
+		    </div>
+	</div>
+	
+</div>
+
+<br>
+
+{% endblock %}
