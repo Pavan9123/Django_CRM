@@ -16,15 +16,16 @@
                     <li><strong>Email</strong>: {{record.email}}</li>
                 </ul>
             </p>
-            <div class = "position-relative d-grid gap-2 d-md-flex justify-content-md-end">
-            <a href="{% url 'home' %}" class="btn btn-outline-dark position-absolute start-0 top-0">Back</a>
+            <div>
             <a href="{% url 'update_record' record.id %}" class="btn btn-outline-primary">Update Record</a>
             <a href="{% url 'delete_record' record.id %}" class="btn btn-outline-danger">Delete</a>
             </div>
         </div>
-  </div>
-
+    </div>
+    <a href="{% url 'home' %}" class="btn btn-outline-dark">Back</a>
 {% endif %}
+
+
 
 
 
